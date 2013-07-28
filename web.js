@@ -11,9 +11,11 @@ var getFileContent = function(fileName) {
 app.get('/', function(request, response) {
 //  response.send('Hello World 2!');
   response.send(getFileContent('index.html'));
+  response.send(getFileContent('handshake01.jpg'));
+//  response.send(getFileContent('index_local.html'));
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
